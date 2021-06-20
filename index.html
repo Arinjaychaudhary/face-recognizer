@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h1 class="btn btn-primary">Face recognizer</h1>
+            <br>
+            <hr>
+            <h3>This app will recognize the following family members</h3>
+            <br>
+            <b>
+                <h3>Father</h3>
+                <br>
+                <h3>Mother</h3>
+                <br>
+                <h3>Me</h3>
+                <br>
+                <h3>Sister</h3>
+            </b>
+            <h2>Webcam view</h2>
+            <div id="camera">
+            </div>
+            <br><br>
+            <div id="result" ></div>
+            <br>
+            <button class="btn btn-success"  onclick=click() >Click image</button>
+            <br><br>
+            <button class="btn btn-success"  onclick=recognize() >Recognize face</button>
+
+            <br><br>
+            <p  >Member:<span id="member_show"></span></p>
+            <p  >Accuracy:<span id="accuracy"></span></p>
+           
+            <script src="main.js"></script>
+        </center>
+    </div>
+</body>
+</html>
