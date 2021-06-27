@@ -1,7 +1,7 @@
 body{
     background-color:goldenrod;
     }
-    #camera,#result{
+    #camera,#photodiv{
         height:400px;
         width: 400px;
         border:3px dashed black;
