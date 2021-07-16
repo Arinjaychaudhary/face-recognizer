@@ -8,10 +8,10 @@ Webcam.set({
 camera = document.getElementById("camera");
 Webcam.attach("#camera");
 
-function click() {
+function take_snapshot() {
 
     Webcam.snap(function (data_uri) {
-        document.getElementById("photodiv").innerHTML = "<img id='photo' src="+data_uri+"/>";
+        document.getElementById("photodiv").innerHTML = `<img id=photo src=${data_uri} />`;
     })
 
 }
@@ -26,7 +26,7 @@ function modelLoaded() {
 
 function recognize(){
 img=document.getElementById("photo");
-link=classify(img,gotResult);
+link.classify(img,gotResult);
 }
 
 function gotResult(error,result){
@@ -36,6 +36,6 @@ console.error(error);
 else{
 console.log(result);
 document.getElementById("member").innerHTML=result[0].label;
-document.getElementById("accuracy").innerHTMLresult[0].confidence.toFixed(3);
+document.getElementById("accuracy").innerHTML=result[0].confidence.toFixed(3);
 }
 }
